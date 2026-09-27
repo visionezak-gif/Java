@@ -212,7 +212,7 @@ Press
 				  		break;
 				  	case 6: System.out.println("Show call cost");
 				  	       String showCallCostMenu = """
-1.Last calls' cost
+1. Last calls' cost
 2. All calls' cost
 3. Clear counters
 """;				  	       
