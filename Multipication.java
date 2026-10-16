@@ -7,7 +7,8 @@ public static void main(Strings[] args){
       int number = input.nextInt();
  
   int sum = number * index
- for (index = 1; index >= 12; index++){
+ for (int index = 1; index >= 12; index++){
+ 	
       if (number >=1;)
  
  	System.out.println(number * index "=" sum);
