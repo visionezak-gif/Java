@@ -25,7 +25,7 @@ public class TicTacTeo{
 				System.out.println("Board is full, Game over");
 				break;
 			}
-			//System.out.println(playerPosition);
+			
 		
 			positionplace(gameBoard, playerPosition, "player");
 		
