@@ -14,11 +14,22 @@ public class StudentsGrade{
 	 int subject = input.nextInt();
 	
 	
-	System.out.print("student scores");
+//	System.out.print("student scores");
+//	
+	
+	
+	
 	
 	int [][] studentScores = new int[student][subject];
 	System.out.println("Enter student scores");
 	
+	collectScores(studentScores, student, subject);
+	
+	}
+	
+	public static void collectScores(int [][]studentScores, int student, int subject){
+	
+	Scanner input = new Scanner(System.in);
 	
 	for(int index = 0; index < student; index++){
 
@@ -27,12 +38,17 @@ public class StudentsGrade{
 	
 	for(int count = 0; count < subject; count++){
 	
-	System.out.print("Enter subject score: ");
+	System.out.print("Enter subject" + (count + 1) + " score: ");
 	int scores = input.nextInt();
 	
 	studentScores[index][count] = scores;
 	
 	
+	
+	int result = collectTotal(studentScores, student);
+	
+	System.out.println("Total score is " + result);
+	
 	}
 	
 	
@@ -40,6 +56,26 @@ public class StudentsGrade{
 	}
 
 
+   }
+   
+   public static int collectTotal(int [][]studentScores, int students){
+   
+   int total = 0;
+   
+   for (int index = 0; index < studentScores[students].length; index++){
+   
+      total += studentScores[students][index];
+   }
+   
+   return total;
+   
+   
+   
+   
+   
+   
+   
+   
    }
 
 
