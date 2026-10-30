@@ -35,8 +35,22 @@ FEEL FREE TO CHOOSE A SPOT FOR YOURSELF.
 	while(true){
 	System.out.print("choose a parking slot from 1 - 20: ");
 	int slot = input.nextInt();
+	System.out.println();
+	
+	
+	if(slot < 1 || slot > 20){
+	System.out.println("Invalid parking slot. try again.");
+	System.out.println();
+	continue;
+	}
 	
 	System.out.println();
+	if (slots[slot-1] ==1){
+	System.out.println("This slot has already been taken, choose another one");
+	System.out.println();
+	continue;
+	}
+	
 	slots[slot - 1] = 1;
 	
 	
@@ -45,10 +59,14 @@ FEEL FREE TO CHOOSE A SPOT FOR YOURSELF.
 	
 	System.out.println("You have successfully choose your spot at slot " + slot);
 	System.out.println();
-	if(slot <= 0){
-		break;
-	}
 	
+	
+	System.out.println("Available slots " + showAvailableSlots(slots));
+	System.out.println();
+	
+	
+	System.out.println("Taken slots are " + slotTaken(slots));
+	System.out.println();
 	}
   }
 
@@ -63,6 +81,36 @@ FEEL FREE TO CHOOSE A SPOT FOR YOURSELF.
 	}
 
 
+	public static int showAvailableSlots(int[] slots){
+	
+	int count =  0;
+	
+	for (int slot = 0; slot < slots.length; slot++){
+	
+	  if(slots[slot] ==0){
+	  count++;
+	  }
+	}
+	
+		return count;
+	}
+
+
+	public static int slotTaken(int[] slots){
+	
+	int count = 0;
+	
+	for (int slot = 0; slot < slots.length; slot++){
+	
+		if(slots[slot] == 1){
+		count++;
+		}
+	  }
+	
+		  return count;
+	}
+	
+	
 
 }
 
