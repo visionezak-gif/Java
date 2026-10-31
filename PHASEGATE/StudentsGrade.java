@@ -45,7 +45,7 @@ public class StudentsGrade{
 	
 	
 	
-	int result = collectTotal(studentScores, student);
+	int result = collectTotal(studentScores, index);
 	
 	System.out.println("Total score is " + result);
 	
@@ -58,24 +58,17 @@ public class StudentsGrade{
 
    }
    
-   public static int collectTotal(int [][]studentScores, int students){
+   public static int collectTotal(int [][]studentScores, int studentIndex){
    
    int total = 0;
    
-   for (int index = 0; index < studentScores[students].length; index++){
+   for (int index = 0; index < studentScores[studentIndex].length; index++){
    
-      total += studentScores[students][index];
+      total += studentScores[studentIndex][index];
    }
    
-   return total;
-   
-   
-   
-   
-   
-   
-   
-   
+  	 return total;
+
    }
 
 
